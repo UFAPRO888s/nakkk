@@ -1,0 +1,95 @@
+{
+	"name": "restreamer-ui",
+	"version": "1.8.0",
+	"bundle": "restreamer-v2.6.0",
+	"private": false,
+	"license": "Apache-2.0",
+	"dependencies": {
+		"@auth0/auth0-spa-js": "^2.0.4",
+		"@babel/plugin-syntax-flow": "^7.21.4",
+		"@babel/plugin-transform-react-jsx": "^7.21.5",
+		"@emotion/react": "^11.10.8",
+		"@emotion/styled": "^11.10.8",
+		"@fontsource/dosis": "^4.5.11",
+		"@fontsource/roboto": "^4.5.8",
+		"@fortawesome/fontawesome-svg-core": "^6.4.0",
+		"@fortawesome/free-brands-svg-icons": "^6.4.0",
+		"@fortawesome/free-solid-svg-icons": "^6.4.0",
+		"@fortawesome/react-fontawesome": "^0.2.0",
+		"@lingui/core": "^3.17.2",
+		"@lingui/macro": "^3.17.2",
+		"@lingui/react": "^3.17.2",
+		"@mui/icons-material": "^5.11.16",
+		"@mui/lab": "^5.0.0-alpha.129",
+		"@mui/material": "^5.12.3",
+		"@mui/styles": "^5.12.3",
+		"@testing-library/dom": "^9.2.0",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^14.0.0",
+		"@testing-library/user-event": "^14.4.3",
+		"@types/react": "^18.2.5",
+		"babel-plugin-macros": "^3.1.0",
+		"eslint": "^8.39.0",
+		"handlebars": "^4.7.7",
+		"jwt-decode": "^3.1.2",
+		"make-plural": "^7.3.0",
+		"react": "^18.2.0",
+		"react-colorful": "^5.6.1",
+		"react-device-detect": "^2.2.3",
+		"react-dom": "^18.2.0",
+		"react-markdown": "^8.0.7",
+		"react-router-dom": "^6.11.1",
+		"react-scripts": "5.0.1",
+		"semver": "^7.5.0",
+		"typescript": "^5.0.4",
+		"url-parse": "^1.5.10",
+		"util": "^0.12.5",
+		"uuid": "^9.0.0",
+		"video.js": "8.3.0",
+		"videojs-overlay": "^3.0.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts --optimize-for-size build",
+		"test": "react-scripts test",
+		"test-ci": "react-scripts test --watchAll=false --testTimeout 50000",
+		"test-coverage": "react-scripts test --watchAll=false --testTimeout 50000 --coverage",
+		"eject": "react-scripts eject",
+		"i18n-extract": "lingui extract",
+		"i18n-extract:clean": "lingui extract --clean",
+		"i18n-compile": "lingui compile",
+		"format": "prettier --write ./src"
+	},
+	"eslintConfig": {
+		"extends": "react-app",
+		"overrides": [
+			{
+				"files": [
+					"**/*.js"
+				],
+				"rules": {
+					"import/no-anonymous-default-export": "off"
+				}
+			}
+		]
+	},
+	"browserslist": {
+		"production": [
+			"> 0.5%, last 2 versions, Firefox ESR, not dead, not IE 11"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"@babel/core": "^7.21.8",
+		"@lingui/cli": "^3.17.2",
+		"babel-core": "^7.0.0-bridge.0",
+		"eslint-config-react-app": "^7.0.1",
+		"prettier": "^2.8.8",
+		"react-error-overlay": "^6.0.11"
+	},
+	"resolutions": {}
+}
