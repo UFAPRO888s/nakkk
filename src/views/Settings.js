@@ -1279,7 +1279,7 @@ export default function Settings(props) {
 										</BoxText>
 									)}
 								</Grid>
-								<Grid item xs={12}>
+								{/* <Grid item xs={12}>
 									<Checkbox
 										label={<Trans>ส่งตัวชี้วัดที่ไม่ระบุตัวตน (ช่วยเราในการพัฒนาในอนาคต)</Trans>}
 										checked={config.update_check}
@@ -1288,14 +1288,14 @@ export default function Settings(props) {
 									/>
 									{env('update_check') && <Env />}
 									<ErrorBox configvalue="update_check" messages={$tabs.general.messages} />
-								</Grid>
+								</Grid> */}
 								<Grid item xs={12}>
 									<Checkbox label={<Trans>Expert mode</Trans>} checked={$expert} onChange={handleExpertMode} />
 								</Grid>
 								<Grid item xs={12}>
 									<Divider />
 								</Grid>
-								<Grid item xs={12}>
+								{/* <Grid item xs={12}>
 									<Button variant="outlined" color="secondary" onClick={handleReloadDialog}>
 										<Trans>Restart</Trans>
 									</Button>
@@ -1304,7 +1304,7 @@ export default function Settings(props) {
 											<Trans>แอปพลิเคชันกำลังใช้การตั้งค่าเวอร์ชันเก่ากว่า.</Trans>
 										</Typography>
 									)}
-								</Grid>
+								</Grid> */}
 							</Grid>
 						</TabPanel>
 						<TabPanel value={$tab} index="service" className="panel">
