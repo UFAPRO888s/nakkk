@@ -369,7 +369,7 @@ const initVersion = (initialVersion) => {
 
 export default function Footer(props) {
 	const classes = useStyles();
-	const version = initVersion(props.version);
+	//const version = initVersion(props.version);
 
 	if (props.expand === true) {
 		return (

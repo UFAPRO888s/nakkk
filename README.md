@@ -17,7 +17,7 @@ $ npm run start
 ```
 45.136.254.239
 Connect the UI with a [datarhei Core](https://github.com/datarhei/core):
-http://localhost:3000?address=https://smaibuy.com
+http://localhost:3002?address=http://45.136.254.239:8080
 
 ### To add/fix translations:
 Locales are located in `src/locals`
