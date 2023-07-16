@@ -3,7 +3,7 @@ import React from 'react';
 import { Trans } from '@lingui/macro';
 import urlparser from 'url-parse';
 import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
@@ -17,22 +17,22 @@ const stream_key_link_rtmp = 'https://docs.datarhei.com/restreamer/knowledge-bas
 const stream_key_link_srt = 'https://docs.datarhei.com/restreamer/knowledge-base/manual/system-settings/srt';
 const description = (
 	<Trans>
-		Transmit the main source to an datarhei Core Ressource. More details about the settings can be found{' '}
-		<Link color="secondary" target="_blank" href="https://docs.datarhei.com/restreamer">
+		ส่งแหล่งข้อมูลหลักไปยัง datarhei Core Ressource สามารถดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้{' '}
+		{/* <Link color="secondary" target="_blank" href="https://docs.datarhei.com/restreamer">
 			here
-		</Link>
+		</Link> */}
 		.
 	</Trans>
 );
-const image_copyright = <Trans>Please contact the operator of the service and check what happens.</Trans>;
+const image_copyright = <Trans>โปรดติดต่อผู้ให้บริการและตรวจสอบว่าเกิดอะไรขึ้น</Trans>;
 const author = {
 	creator: {
-		name: 'datarhei.com',
-		link: 'https://datarhei.com',
+		name: 'LiveLotto',
+		link: '#',
 	},
 	maintainer: {
-		name: 'datarhei.com',
-		link: 'https://datarhei.com',
+		name: 'LiveLotto',
+		link: '#',
 	},
 };
 const category = 'software';
@@ -46,7 +46,7 @@ const requires = {
 };
 
 function ServiceIcon(props) {
-	return <img src={Logo} alt="datarhei.com Logo" {...props} />;
+	return <img src={Logo} alt="LiveLotto Logo" {...props} />;
 }
 
 function init(settings) {
@@ -186,14 +186,14 @@ function Service(props) {
 					{!settings.v2_address && (
 						<Typography>
 							<strong>
-								<Trans>Restreamer instructions</Trans>:
+								<Trans>LiveLotto instructions</Trans>:
 							</strong>
 							<br />
-							<Trans>1. Switch to the interface of the target Restreamer.</Trans>
+							<Trans>1. สลับไปที่อินเทอร์เฟซของ LiveLotto เป้าหมาย</Trans>
 							<br />
-							<Trans>2. Create a new channel and select RTMP or SRT server.</Trans>
+							<Trans>2. สร้างช่องใหม่และเลือกเซิร์ฟเวอร์ RTMP หรือ SRT</Trans>
 							<br />
-							<Trans>3. Copy the URL and paste it in the "Target address" field.</Trans>
+							<Trans>3. คัดลอก URL และวางในช่อง "ที่อยู่เป้าหมาย"</Trans>
 						</Typography>
 					)}
 					{settings.v2_address && (

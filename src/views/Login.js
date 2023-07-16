@@ -5,7 +5,7 @@ import Backdrop from '@mui/material/Backdrop';
 import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
 import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
 import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
 import ToggleButton from '@mui/material/ToggleButton';
@@ -327,18 +327,18 @@ export default function Login(props) {
 								</Grid>
 							</Grid>
 						</Grid> */}
-						<Grid item xs={12}>
+						{/* <Grid item xs={12}>
 							<Button variant="service" color="primary" fullWidth size="large" href="https://service.datarhei.com" target="blank">
 								<Trans>Sign up (free)</Trans>
 							</Button>
-						</Grid>
+						</Grid> */}
 					</React.Fragment>
 				)}
 				{$loginTarget === 'auth0' && hasAuthType($auths, 'auth0') && (
 					<React.Fragment>
 						<Grid item xs={12}>
 							<Grid container spacing={3}>
-								<Grid item xs={12} align="center">
+								{/* <Grid item xs={12} align="center">
 									<Typography>
 										<Trans>
 											Use Auth0 for your running Restreamer Core. More{' '}
@@ -348,7 +348,7 @@ export default function Login(props) {
 											.
 										</Trans>
 									</Typography>
-								</Grid>
+								</Grid> */}
 								{$canUseAuth0 === false ? (
 									<React.Fragment>
 										<Grid item xs={12} align="center">

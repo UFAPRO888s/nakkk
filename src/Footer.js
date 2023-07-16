@@ -372,9 +372,9 @@ export default function Footer(props) {
 			<Grid container className={classes.footer} spacing={0} direction="row" alignItems="center">
 				<Grid item xs={12}>
 					<Stack direction="row" justifyContent="space-between" alignItems="center" spacing={0}>
-						<Stack className="footerLeft" direction="row" alignItems="center" spacing={0}>
-							<Logo style={{ width: '10px' }} className={classes.logo} />
-							<Typography className="footerVersion">LIVE LOTTO v1999x99x88</Typography>
+						<Stack className="footerLeft" direction="row" alignItems="center" spacing={2}>
+							<Logo style={{ width: '20px',pending:'5px' }} className={classes.logo} />
+							<Typography className="footerVersion"> LIVE HUAYNAKARAJ v1.099.88</Typography>
 						</Stack>
 						<Resources resources={props.resources} />
 					</Stack>

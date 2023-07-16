@@ -29,11 +29,11 @@ export default function Invalid(props) {
 			<PaperHeader title={<Trans>Error</Trans>} onAbort={() => window.location.reload()} />
 			<PaperContent>
 				<Typography>
-					<Trans>There was an error connecting to LOTTO LIVE at {props.address}.</Trans>
+					<Trans>เกิดข้อผิดพลาดในการเชื่อมต่อกับ LOTTO LIVE ที่ {props.address}.</Trans>
 				</Typography>
 				{$mixed === true && (
 					<Typography sx={{ mt: '1em' }}>
-						<Trans>Connecting to LOTTO LIVE Core failed probably because of mixed content.</Trans>
+						<Trans>การเชื่อมต่อกับ LOTTO LIVE Core ล้มเหลวอาจเป็นเพราะเนื้อหาผสมกัน</Trans>
 					</Typography>
 				)}
 			</PaperContent>

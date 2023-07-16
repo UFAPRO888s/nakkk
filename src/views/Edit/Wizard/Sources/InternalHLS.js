@@ -45,7 +45,7 @@ function Source(props) {
 		<React.Fragment>
 			<Grid item xs={12}>
 				<Typography>
-					<Trans>Send stream to this address:</Trans>
+					<Trans>ส่งสตรีมไปยังที่อยู่นี้:</Trans>
 				</Typography>
 			</Grid>
 			<Grid item xs={12}>

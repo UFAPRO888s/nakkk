@@ -12,16 +12,16 @@ const version = '1.0';
 const description = <Trans>Live-Streaming to Vimeo Live RTMP Service</Trans>;
 const stream_key_link = '';
 const image_copyright = <Trans>More about licenses here</Trans>;
-const author = {
-	creator: {
-		name: 'datarhei',
-		link: 'https://github.com/datarhei',
-	},
-	maintainer: {
-		name: 'datarhei',
-		link: 'https://github.com/datarhei',
-	},
-};
+// const author = {
+// 	creator: {
+// 		name: 'datarhei',
+// 		link: 'https://github.com/datarhei',
+// 	},
+// 	maintainer: {
+// 		name: 'datarhei',
+// 		link: 'https://github.com/datarhei',
+// 	},
+// };
 const category = 'platform';
 const requires = {
 	protocols: ['rtmp'],
@@ -84,4 +84,4 @@ Service.defaultProps = {
 	onChange: function (output, settings) {},
 };
 
-export { id, name, version, stream_key_link, description, image_copyright, author, category, requires, ServiceIcon as icon, Service as component };
+export { id, name, version, stream_key_link, description, image_copyright, category, requires, ServiceIcon as icon, Service as component };

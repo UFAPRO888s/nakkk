@@ -205,22 +205,22 @@ export default function Add(props) {
 		const [global, inputs, outputs] = helper.createInputsOutputs($sources, $settings.profiles, $settings.outputs, false);
 		if (inputs.length === 0 || outputs.length === 0) {
 			setSaving(false);
-			notify.Dispatch('error', 'save:egress:' + $service, i18n._(t`The input profile is not complete. Please define a video and/or audio source.`));
+			notify.Dispatch('error', 'save:egress:' + $service, i18n._(t`โปรไฟล์อินพุตไม่สมบูรณ์ โปรดระบุแหล่งที่มาของวิดีโอและ/หรือเสียง`));
 			return;
 		}
 
 		const [id, err] = await props.restreamer.CreateEgress(_channelid, $service, global, inputs, outputs, $settings.control);
 		if (err !== null) {
 			setSaving(false);
-			notify.Dispatch('error', 'save:egress:' + $service, i18n._(t`Failed to create publication service (${err.message})`));
+			notify.Dispatch('error', 'save:egress:' + $service, i18n._(t`สร้างบริการสตรีมมิ่งไม่สำเร็จ (${err.message})`));
 			return;
 		}
 
 		await props.restreamer.SetEgressMetadata(_channelid, id, $settings);
 
-		let message = i18n._(t`The publication service has been created`);
+		let message = i18n._(t`สร้างบริการสตรีมมิ่งแล้ว`);
 		if ($settings.name.length !== 0) {
-			message = i18n._(t`The publication service "${$settings.name}" has been created`);
+			message = i18n._(t`บริการ สตรีมมิ่ง "${$settings.name}" ได้ถูกสร้างขึ้น`);
 		}
 
 		setSaving(false);
@@ -296,10 +296,10 @@ export default function Add(props) {
 							title={
 								<React.Fragment>
 									<Typography variant="subtitle2">
-										<Trans>Incompatible</Trans>
+										<Trans>เข้ากันไม่ได้</Trans>
 									</Typography>
 									<Typography>
-										<Trans>Check the requirements</Trans>
+										<Trans>ตรวจสอบข้อกำหนด</Trans>
 									</Typography>
 								</React.Fragment>
 							}
@@ -386,9 +386,9 @@ export default function Add(props) {
 						<Grid container spacing={2} className={classes.gridContainer}>
 							{serviceList}
 							<Grid item xs={12} className={classes.buttonAbort}>
-								<Button variant="outlined" color="default" onClick={handleAbort}>
+								{/* <Button variant="outlined" color="default" onClick={handleAbort}>
 									<Trans>Abort</Trans>
-								</Button>
+								</Button> */}
 							</Grid>
 						</Grid>
 					</React.Fragment>
@@ -469,7 +469,7 @@ export default function Add(props) {
 										</Grid>
 										<Grid item xs={12}>
 											<Typography variant="subheading">
-												<Trans>Please use "Passthrough (copy)" if possible. Encoding requires additional CPU/GPU resources.</Trans>
+												<Trans>กรุณาใช้ "Passthrough (copy)" ถ้าเป็นไปได้ การเข้ารหัสต้องใช้ทรัพยากร CPU/GPU เพิ่มเติม</Trans>
 											</Typography>
 										</Grid>
 										<Grid item xs={12}>

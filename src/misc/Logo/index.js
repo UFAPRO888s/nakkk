@@ -6,7 +6,7 @@ import company_logo from './images/LOGO.webp';
 
 const useStyles = makeStyles((theme) => ({
 	Logo: {
-		height: 17,
+		height: 60,
 	},
 }));
 
@@ -18,7 +18,7 @@ export default function Logo(props) {
 	// eslint-disable-next-line no-useless-escape
 	return (
 		<a href={link} className={classes.Logo} target="_blank" rel="noopener noreferrer">
-			<img style={{ width: '20px' }} src={company_logo} alt="nook dev logo" />
+			<img style={{ width: '50px' }} src={company_logo} alt="nook dev logo" />
 		</a>
 	);
 }

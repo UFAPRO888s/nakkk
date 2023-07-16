@@ -21,7 +21,7 @@ export default function Metadata(props) {
 				</Grid>
 				<Grid item xs={12}>
 					<Typography>
-						<Trans>Briefly describe what the audience will see during the live stream.</Trans>
+						<Trans>อธิบายสั้น ๆ ว่าผู้ชมจะเห็นอะไร ระหว่างการสตรีมสด</Trans>
 					</Typography>
 				</Grid>
 				<Grid item xs={12}>

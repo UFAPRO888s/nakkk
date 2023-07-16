@@ -11,10 +11,10 @@ import LicenseControl from '../../../misc/controls/License';
 import Paper from '../../../misc/Paper';
 import PaperHeader from '../../../misc/PaperHeader';
 
-export default function License(props) {
+export default function LineOa(props) {
 	return (
 		<Paper xs={12} sm={9} md={6} marginBottom="6em" className="PaperM">
-			<PaperHeader spacing={2} variant="h1" title={<Trans>License</Trans>} onAbort={props.onAbort} onHelp={props.onHelp} />
+			<PaperHeader spacing={2} variant="h1" title={<Trans>LINE Publish</Trans>} onAbort={props.onAbort} onHelp={props.onHelp} />
 			<Grid container spacing={2}>
 				<Grid item xs={12}>
 					<Divider />
@@ -22,7 +22,7 @@ export default function License(props) {
 				<Grid item xs={12}>
 					<Typography>
 						<Trans>
-						ใช้ลิขสิทธิ์ของคุณและเลือกใบอนุญาตภาพที่ถูกต้อง ไม่ว่าจะฟรีสำหรับทุกคนหรือจำกัดอย่างมาก อภิปรายสั้น ๆ ว่าคนอื่นเป็นอย่างไร ได้รับอนุญาตให้ทำกับภาพของคุณ
+							ข้อความประกาศลงกลุ่ม
 						</Trans>
 					</Typography>
 				</Grid>
@@ -47,7 +47,7 @@ export default function License(props) {
 	);
 }
 
-License.defaultProps = {
+LineOa.defaultProps = {
 	onAbort: () => {},
 	onHelp: () => {},
 	onBack: () => {},

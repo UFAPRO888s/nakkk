@@ -16,18 +16,18 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import Modal from '@mui/material/Modal';
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+//import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import Settings from '@mui/icons-material/Settings';
 import Stack from '@mui/material/Stack';
-import TranslateIcon from '@mui/icons-material/Translate';
+//import TranslateIcon from '@mui/icons-material/Translate';
 import Typography from '@mui/material/Typography';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import WebIcon from '@mui/icons-material/Web';
 
-import * as Storage from './utils/storage';
+//import * as Storage from './utils/storage';
 import * as Version from './version';
 import welcomeImage from './assets/images/LOGO.webp';
-import LanguageSelect from './misc/LanguageSelect';
+//import LanguageSelect from './misc/LanguageSelect';
 //import Logo from './misc/Logo/rsLogo';
 import ModalContent from './misc/ModalContent';
 import PaperThumb from './misc/PaperThumb';
@@ -234,9 +234,9 @@ function HeaderMenu(props) {
 		setAnchorEl(null);
 	};
 
-	const handleLanguageChange = (language) => {
-		Storage.Set('language', language);
-	};
+	// const handleLanguageChange = (language) => {
+	// 	Storage.Set('language', language);
+	// };
 
 	if (props.expand === true) {
 		return (
@@ -294,12 +294,12 @@ function HeaderMenu(props) {
 						</ListItemIcon>
 						<Trans>Issue alert</Trans>
 					</MenuItem> */}
-					<MenuItem>
+					{/* <MenuItem>
 						<ListItemIcon>
 							<TranslateIcon fontSize="small" />
 						</ListItemIcon>
 						<LanguageSelect onChange={handleLanguageChange} />
-					</MenuItem>
+					</MenuItem> */}
 					<MenuItem onClick={props.onLogout}>
 						<ListItemIcon>
 							<Logout fontSize="small" />
@@ -317,12 +317,12 @@ function HeaderMenu(props) {
 					<MenuOpenIcon className="fabIcon" />
 				</Fab>
 				<StyledMenu anchorEl={$anchorEl} open={$anchorEl !== null} onClose={handleMenuClose} onClick={handleMenuClose}>
-					<MenuItem onClick={() => setAbout(true)}>
+					{/* <MenuItem onClick={() => setAbout(true)}>
 						<ListItemIcon>
 							<RocketLaunchIcon fontSize="small" />
 						</ListItemIcon>
 						<Trans>About</Trans>
-					</MenuItem>
+					</MenuItem> */}
 					{/* <MenuItem component="a" href="#" target="blank">
 						<ListItemIcon>
 							<HelpOutlineIcon fontSize="small" />
@@ -335,12 +335,12 @@ function HeaderMenu(props) {
 						</ListItemIcon>
 						<Trans>Issue alert</Trans>
 					</MenuItem> */}
-					<MenuItem>
+					{/* <MenuItem>
 						<ListItemIcon>
 							<TranslateIcon fontSize="small" />
 						</ListItemIcon>
 						<LanguageSelect onChange={handleLanguageChange} />
-					</MenuItem>
+					</MenuItem> */}
 				</StyledMenu>
 				<AboutModal open={$about} onClose={() => setAbout(false)} />
 			</React.Fragment>

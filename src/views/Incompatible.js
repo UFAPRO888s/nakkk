@@ -7,20 +7,18 @@ import PaperHeader from '../misc/PaperHeader';
 import PaperContent from '../misc/PaperContent';
 
 export default function Incompatible(props) {
-	let text = <Trans>This version of the UI is compatible.</Trans>;
+	let text = <Trans>UI เวอร์ชันนี้เข้ากันได้</Trans>;
 
 	if (props.type === 'core') {
 		text = (
 			<Trans>
-				This version of the UI doesn't support the connected Core ({props.have}). The UI requires {props.want}. Please use a compatible version of the
-				UI.
+				UI เวอร์ชันนี้ไม่รองรับคอร์ที่เชื่อมต่อ ({props.have}) UI ต้องใช้ {props.want} โปรดใช้รุ่นที่เข้ากันได้ของUI
 			</Trans>
 		);
 	} else if (props.type === 'ffmpeg') {
 		text = (
 			<Trans>
-				This version of the UI doesn't support the available FFmpeg binary ({props.have}). The UI requires {props.want}. Please use a supported FFmpeg
-				binary.
+				UI เวอร์ชันนี้ไม่รองรับไบนารี FFmpeg ที่มีอยู่ ({props.have}) UI ต้องใช้ {props.want} โปรดใช้ FFmpeg ที่รองรับไบนารี่
 			</Trans>
 		);
 	}

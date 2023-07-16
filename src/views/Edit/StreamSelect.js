@@ -44,13 +44,13 @@ export default function StreamSelect(props) {
 			selected = -1;
 			streamList.push(
 				<MenuItem value="-1" key="unavailable" disabled>
-					{i18n._(t`No video stream available`)}
+					{i18n._(t`ไม่มีสตรีมวิดีโอ`)}
 				</MenuItem>
 			);
 		} else {
 			streamList.unshift(
 				<MenuItem value="-1" key="none" disabled>
-					{i18n._(t`Choose a video stream`)}
+					{i18n._(t`เลือกสตรีมวิดีโอ`)}
 				</MenuItem>
 			);
 		}

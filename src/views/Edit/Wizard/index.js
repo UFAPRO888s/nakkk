@@ -26,7 +26,8 @@ import Abort from './Abort';
 import Error from './Error';
 import Saving from './Saving';
 import Probe from './Probe';
-import License from './License';
+//import License from './License';
+import LineOa from './LineOa';
 import Metadata from './Metadata';
 
 export default function Wizard(props) {
@@ -800,7 +801,8 @@ export default function Wizard(props) {
 				metadata={$data.meta}
 			/>
 		);
-	} else if ($step === 'LICENSE') {
+	} 
+	else if ($step === 'LICENSE') {
 		handleNext = async () => {
 			setStep('SAVING');
 
@@ -812,7 +814,7 @@ export default function Wizard(props) {
 				setStep('ERROR');
 			}
 		};
-
+	
 		handleBack = () => {
 			setStep('META');
 		};
@@ -825,7 +827,7 @@ export default function Wizard(props) {
 		};
 
 		return (
-			<License
+			<LineOa
 				onAbort={handleAbort}
 				onHelp={handleHelp('license')}
 				onBack={handleBack}
@@ -834,7 +836,8 @@ export default function Wizard(props) {
 				license={$data.license}
 			/>
 		);
-	} else if ($step === 'SAVING') {
+	}
+	 else if ($step === 'SAVING') {
 		return <Saving onAbort={handleAbort} />;
 	} else if ($step === 'DONE') {
 		return null;

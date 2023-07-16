@@ -160,7 +160,7 @@ export default function Publication(props) {
 	return (
 		<React.Fragment>
 			<Paper marginBottom="0">
-				<PaperHeader title={<Trans>กำลังสด</Trans>} onAdd={handleServiceAdd} onHelp={handleHelp} />
+				<PaperHeader title={<Trans>กำลังสตรีมมิ่ง</Trans>} onAdd={handleServiceAdd} onHelp={handleHelp} />
 				<Grid container spacing={1}>
 					<Grid item xs={12} align="center">
 						<Divider />
@@ -170,7 +170,7 @@ export default function Publication(props) {
 						<Grid container direction="row" justifyContent="center" alignItems="center" className={classes.vierwerDescription}>
 							<PersonIcon fontSize="small" />
 							<Typography className={classes.vierwerTypo}>
-								<Trans>ผู้ชม</Trans>
+								<Trans>จำนวนผู้รับชม</Trans>
 							</Typography>
 						</Grid>
 					</Grid>

@@ -6,7 +6,7 @@ import company_logo from './images/logo.png';
 
 const useStyles = makeStyles((theme) => ({
 	Logo: {
-		height: 15,
+		height: 50,
 	},
 }));
 

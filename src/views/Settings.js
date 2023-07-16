@@ -1349,7 +1349,7 @@ export default function Settings(props) {
 									/>
 									<ErrorBox configvalue="name" messages={$tabs.service.messages} />
 									<Typography variant="caption">
-										<Trans>ชื่อที่มนุษย์สามารถอ่านได้บนบริการ</Trans>
+										<Trans>ชื่อสตรีมมิ่งบนบริการ</Trans>
 									</Typography>
 								</Grid>
 								<Grid item xs={12}>
@@ -1379,7 +1379,7 @@ export default function Settings(props) {
 									/>
 									<ErrorBox configvalue="coreconfig" messages={$tabs.service.messages} />
 									<Typography variant="caption">
-										<Trans>การกำหนดค่า JSON แบบกำหนดเองสำหรับ datarhei Core.</Trans>
+										<Trans>การกำหนดค่า JSON แบบกำหนดเองสำหรับ ChangYed Core.</Trans>
 									</Typography>
 								</Grid>
 							</Grid>
@@ -1407,7 +1407,7 @@ export default function Settings(props) {
 									<ErrorBox configvalue="host.name" messages={$tabs.network.messages} />
 									<Typography variant="caption">
 										<Trans>
-											ชื่อโดเมนสาธารณะที่เข้าถึงได้ของโฮสต์ที่ Restreamer นี้ทำงานอยู่ คั่นชื่อโดเมนหลายๆ ชื่อด้วย a เครื่องหมายจุลภาค
+											ชื่อโดเมนสาธารณะที่เข้าถึงได้ของโฮสต์ที่ Lotto Live นี้ทำงานอยู่ คั่นชื่อโดเมนหลายๆ ชื่อด้วย a เครื่องหมายจุลภาค
 										</Trans>
 									</Typography>
 								</Grid>
@@ -1891,7 +1891,7 @@ export default function Settings(props) {
 									/>
 									<ErrorBox configvalue="storage.disk.cache.types.allow" messages={$tabs.storage.messages} />
 									<Typography variant="caption">
-										<Trans>List of file extensions to cache (e.g. ".html"), one per line. Leave empty to cache all file types.</Trans>
+										<Trans>รายการนามสกุลไฟล์ที่จะแคช (เช่น ".html") หนึ่งรายการต่อบรรทัด เว้นว่างไว้เพื่อแคชไฟล์ทุกประเภท</Trans>
 									</Typography>
 								</Grid>
 								<Grid item xs={6}>
@@ -1906,7 +1906,7 @@ export default function Settings(props) {
 									/>
 									<ErrorBox configvalue="storage.disk.cache.types.block" messages={$tabs.storage.messages} />
 									<Typography variant="caption">
-										<Trans>List of file extensions not to cache (e.g. ".m3u8"), one per line. Leave empty for none.</Trans>
+										<Trans>รายการนามสกุลไฟล์ที่ไม่ต้องแคช (เช่น ".m3u8") หนึ่งรายการต่อบรรทัด เว้นว่างไว้สำหรับใคร</Trans>
 									</Typography>
 								</Grid>
 							</Grid>
@@ -2005,7 +2005,7 @@ export default function Settings(props) {
 									/>
 									<ErrorBox configvalue="rtmp.token" messages={$tabs.rtmp.messages} />
 									<Typography variant="caption">
-										<Trans>RTMP token for publishing and playing. The token is the value of the URL query parameter 'token.'</Trans>
+										<Trans>โทเค็น RTMP สำหรับการเผยแพร่และเล่น โทเค็นคือค่าของพารามิเตอร์การค้นหา URL</Trans>
 									</Typography>
 								</Grid>
 							</Grid>
@@ -2234,14 +2234,14 @@ export default function Settings(props) {
 						{$restart.timeout === false ? (
 							<React.Fragment>
 								<Typography variant="body1">
-									<Trans>การรีสตาร์ท Restreamer Core ...</Trans>
+									<Trans>การรีสตาร์ท ChangYed Core ...</Trans>
 								</Typography>
 								<LinearProgress sx={{ mt: '1em' }} />
 							</React.Fragment>
 						) : (
 							<React.Fragment>
 								<Typography variant="body1">
-									<Trans>การเชื่อมต่อกับ Restreamer Core อีกครั้งล้มเหลวในช่วง {RETRIES} วินาทีที่ผ่านมา</Trans>
+									<Trans>การเชื่อมต่อกับ ChangYed Core อีกครั้งล้มเหลวในช่วง {RETRIES} วินาทีที่ผ่านมา</Trans>
 								</Typography>
 								<Typography variant="body1" sx={{ mt: '1em' }}>
 									<Trans>

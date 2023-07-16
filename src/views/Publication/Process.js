@@ -65,12 +65,12 @@ export default function Process(props) {
 						</Typography>
 						{progress.reconnect !== -1 && (
 							<Typography variant="body2" style={{ marginTop: 0, marginBottom: '.2em' }}>
-								<Trans>Reconnecting in {progress.reconnect}s</Trans>
+								<Trans>กำลังเชื่อมต่ออีกใน {progress.reconnect}s</Trans>
 							</Typography>
 						)}
 						{progress.reconnect === -1 && (
 							<Typography variant="body2" style={{ marginTop: 0, marginBottom: '.2em' }}>
-								<Trans>You have to reconnect manually</Trans>
+								<Trans>คุณต้องเชื่อมต่อใหม่ด้วยตนเอง</Trans>
 							</Typography>
 						)}
 					</BoxText>

@@ -352,9 +352,9 @@ export default function Source(props) {
 											<WarningIcon fontSize="large" color="error" />
 											<Typography>
 												<Trans>
-													Failed to probe the source. Please check the{' '}
+													ไม่สามารถตรวจสอบแหล่งที่มาวีดีโอ กรุณาตรวจสอบ{' '}
 													<Link color="textSecondary" href="#!" onClick={handleModal('video')}>
-														probe details
+														รายละเอียด
 													</Link>
 													.
 												</Trans>
@@ -368,7 +368,7 @@ export default function Source(props) {
 											<WarningIcon fontSize="large" color="error" />
 											<Typography>
 												<Trans>
-													The source doesn't provide any video streams. Please check the{' '}
+													ไม่สามารถตรวจสอบแหล่งที่มา วีดีโอกรุณาตรวจสอบ{' '}
 													<Link href="#!" onClick={handleModal('video')}>
 														probe details
 													</Link>
@@ -501,7 +501,7 @@ export default function Source(props) {
 													<WarningIcon fontSize="large" color="error" />
 													<Typography>
 														<Trans>
-															Failed to probe the source. Please check the{' '}
+															ไม่สามารถตรวจสอบแหล่งที่มา เสียง กรุณาตรวจสอบ{' '}
 															<Link href="#!" onClick={handleModal('audio')}>
 																probe details
 															</Link>
@@ -517,7 +517,7 @@ export default function Source(props) {
 													<WarningIcon fontSize="large" color="error" />
 													<Typography>
 														<Trans>
-															The source doesn't provide any audio streams. Please check the{' '}
+															ไม่สามารถตรวจสอบแหล่งที่มาเสียง กรุณาตรวจสอบ{' '}
 															<Link href="#!" onClick={handleModal('audio')}>
 																probe details
 															</Link>

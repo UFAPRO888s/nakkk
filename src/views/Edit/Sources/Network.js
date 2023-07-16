@@ -792,7 +792,7 @@ function Push(props) {
 					<BoxText color="dark">
 						<WarningIcon fontSize="large" color="error" />
 						<Typography>
-							<Trans>The available FFmpeg binary doesn't support any of the required protocols.</Trans>
+							<Trans>ไบนารี FFmpeg ที่มีอยู่ไม่รองรับโปรโตคอลที่จำเป็นใดๆ</Trans>
 						</Typography>
 					</BoxText>
 				</Grid>
@@ -831,7 +831,7 @@ function PushHLS(props) {
 		<Grid container alignItems="flex-start" spacing={2} className={classes.gridContainer}>
 			<Grid item xs={12}>
 				<Typography>
-					<Trans>Send stream to this address:</Trans>
+					<Trans>ส่งสตรีมไปยังที่อยู่นี้:</Trans>
 				</Typography>
 			</Grid>
 			<Grid item xs={12}>
@@ -878,7 +878,7 @@ function PushRTMP(props) {
 			<Grid container alignItems="flex-start" spacing={2} className={classes.gridContainer}>
 				<Grid item xs={12}>
 					<Typography>
-						<Trans>Send stream to this address:</Trans>
+						<Trans>ส่งสตรีมไปยังที่อยู่นี้:</Trans>
 					</Typography>
 				</Grid>
 				<Grid item xs={12}>
@@ -928,7 +928,7 @@ function PushSRT(props) {
 			<Grid container alignItems="flex-start" spacing={2} className={classes.gridContainer}>
 				<Grid item xs={12}>
 					<Typography>
-						<Trans>Send stream to this address:</Trans>
+						<Trans>ส่งสตรีมไปยังที่อยู่นี้:</Trans>
 					</Typography>
 				</Grid>
 				<Grid item xs={12}>

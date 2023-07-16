@@ -18,7 +18,7 @@ export default function Saving(props) {
 				</Grid>
 				<Grid item xs={12}>
 					<Typography>
-						<Trans>Please wait. Setting up the stream ...</Trans>
+						<Trans>โปรดรอ การตั้งค่าสตรีม ...</Trans>
 					</Typography>
 				</Grid>
 			</Grid>

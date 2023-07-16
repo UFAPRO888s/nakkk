@@ -450,7 +450,7 @@ export default function Edit(props) {
 											<Grid item xs={12}>
 												<BoxText>
 													<Typography variant="body2" gutterBottom>
-														<Trans>You have unsaved changes. Please save them before you can control the service again.</Trans>
+														<Trans>คุณมีการเปลี่ยนแปลงที่ไม่ได้บันทึก โปรดบันทึกไว้ก่อนที่คุณจะสามารถควบคุมบริการได้อีกครั้ง.</Trans>
 													</Typography>
 												</BoxText>
 											</Grid>
@@ -488,7 +488,7 @@ export default function Edit(props) {
 								</Grid>
 								<Grid item xs={12}>
 									<Typography variant="subheading">
-										<Trans>Select RTMP or SRT (if enabled) for less latency.</Trans>
+										<Trans>เลือก RTMP หรือ SRT (หากเปิดใช้งาน) เพื่อให้มีเวลาแฝงน้อยลง</Trans>
 									</Typography>
 								</Grid>
 								<Grid item xs={12}>
@@ -502,7 +502,7 @@ export default function Edit(props) {
 								<Grid item xs={12}>
 									<Typography variant="subheading">
 										<Trans>
-											Passthrough (copy) should only be disabled if necessary. Each encoding requires additional CPU/GPU resources.
+											กรุณาใช้ "Passthrough (copy)" ถ้าเป็นไปได้ การเข้ารหัสต้องใช้ทรัพยากร CPU/GPU เพิ่มเติม
 										</Trans>
 									</Typography>
 								</Grid>
@@ -589,7 +589,7 @@ export default function Edit(props) {
 				}
 			>
 				<Typography>
-					<Trans>Deleting a publication service cannot be reversed. The publication stops immediately.</Trans>
+					<Trans>การลบบริการสตรีมมิ่งไม่สามารถย้อนกลับได้ สตรีมมิ่งหยุดลงทันที</Trans>
 				</Typography>
 			</Dialog>
 			<Backdrop open={$saving}>

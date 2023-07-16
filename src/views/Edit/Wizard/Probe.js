@@ -18,7 +18,7 @@ export default function Probe(props) {
 				</Grid>
 				<Grid item xs={12}>
 					<Typography textAlign="center">
-						<Trans>Please wait. Probe stream data ...</Trans>
+						<Trans>โปรดรอ ตรวจสอบข้อมูลสตรีม ...</Trans>
 					</Typography>
 				</Grid>
 			</Grid>

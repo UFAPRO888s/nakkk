@@ -12,16 +12,16 @@ const version = '1.0';
 const stream_key_link = '';
 const description = <Trans>Transmit a Livestream to a Telegram Channel.</Trans>;
 const image_copyright = <Trans>Please get in touch with the operator of the service and check what happens.</Trans>;
-const author = {
-	creator: {
-		name: 'datarhei',
-		link: 'https://github.com/datarhei',
-	},
-	maintainer: {
-		name: 'datarhei',
-		link: 'https://github.com/datarhei',
-	},
-};
+// const author = {
+// 	creator: {
+// 		name: 'datarhei',
+// 		link: 'https://github.com/datarhei',
+// 	},
+// 	maintainer: {
+// 		name: 'datarhei',
+// 		link: 'https://github.com/datarhei',
+// 	},
+// };
 const category = 'platform';
 const requires = {
 	protocols: ['rtmps'],
@@ -115,4 +115,4 @@ Service.defaultProps = {
 	onChange: function (output, settings) {},
 };
 
-export { id, name, version, stream_key_link, description, image_copyright, author, category, requires, ServiceIcon as icon, Service as component };
+export { id, name, version, stream_key_link, description, image_copyright, category, requires, ServiceIcon as icon, Service as component };
