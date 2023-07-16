@@ -801,8 +801,7 @@ export default function Wizard(props) {
 				metadata={$data.meta}
 			/>
 		);
-	} 
-	else if ($step === 'LICENSE') {
+	} else if ($step === 'LICENSE') {
 		handleNext = async () => {
 			setStep('SAVING');
 
@@ -814,7 +813,7 @@ export default function Wizard(props) {
 				setStep('ERROR');
 			}
 		};
-	
+
 		handleBack = () => {
 			setStep('META');
 		};
@@ -836,8 +835,7 @@ export default function Wizard(props) {
 				license={$data.license}
 			/>
 		);
-	}
-	 else if ($step === 'SAVING') {
+	} else if ($step === 'SAVING') {
 		return <Saving onAbort={handleAbort} />;
 	} else if ($step === 'DONE') {
 		return null;

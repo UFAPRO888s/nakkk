@@ -450,7 +450,9 @@ export default function Edit(props) {
 											<Grid item xs={12}>
 												<BoxText>
 													<Typography variant="body2" gutterBottom>
-														<Trans>คุณมีการเปลี่ยนแปลงที่ไม่ได้บันทึก โปรดบันทึกไว้ก่อนที่คุณจะสามารถควบคุมบริการได้อีกครั้ง.</Trans>
+														<Trans>
+															คุณมีการเปลี่ยนแปลงที่ไม่ได้บันทึก โปรดบันทึกไว้ก่อนที่คุณจะสามารถควบคุมบริการได้อีกครั้ง.
+														</Trans>
 													</Typography>
 												</BoxText>
 											</Grid>
@@ -501,9 +503,7 @@ export default function Edit(props) {
 								</Grid>
 								<Grid item xs={12}>
 									<Typography variant="subheading">
-										<Trans>
-											กรุณาใช้ "Passthrough (copy)" ถ้าเป็นไปได้ การเข้ารหัสต้องใช้ทรัพยากร CPU/GPU เพิ่มเติม
-										</Trans>
+										<Trans>กรุณาใช้ "Passthrough (copy)" ถ้าเป็นไปได้ การเข้ารหัสต้องใช้ทรัพยากร CPU/GPU เพิ่มเติม</Trans>
 									</Typography>
 								</Grid>
 								<Grid item xs={12}>

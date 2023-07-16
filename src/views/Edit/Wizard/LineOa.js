@@ -21,9 +21,7 @@ export default function LineOa(props) {
 				</Grid>
 				<Grid item xs={12}>
 					<Typography>
-						<Trans>
-							ข้อความประกาศลงกลุ่ม
-						</Trans>
+						<Trans>ข้อความประกาศลงกลุ่ม</Trans>
 					</Typography>
 				</Grid>
 				<Grid item xs={12}>

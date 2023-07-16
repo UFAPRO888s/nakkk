@@ -28,11 +28,9 @@ import Select from '../../Select';
 // 	},
 // }));
 
-
-
 export default function License(props) {
 	//const classes = useStyles();
-	const [OAAcc, setOAAcc] = useState()
+	const [OAAcc, setOAAcc] = useState();
 	//const [SLOAAcc, setSLOAAcc] = useState()
 	//const { i18n } = useLingui();
 
@@ -57,25 +55,20 @@ export default function License(props) {
 
 	useEffect(() => {
 		const getUsers = async () => {
-			const accOa = await fetch("http://45.136.254.239:9600/getbots");
-			const DataAcc = await accOa.json()
+			const accOa = await fetch('http://45.136.254.239:9600/getbots');
+			const DataAcc = await accOa.json();
 			setOAAcc(DataAcc);
 		};
 
 		getUsers();
 
-		return () => {
-
-		};
+		return () => {};
 	}, []);
-
-	
-
 
 	//let version = 'none';
 	//const matches = props.license.match(reVersion);
 	//if (matches !== null) {
-		//version = matches[0];
+	//version = matches[0];
 	//}
 	//console.log(props.license)
 	// const which = props.license.replace(reVersion, '').trim();
@@ -138,11 +131,14 @@ export default function License(props) {
 		<Grid container spacing={2}>
 			<Grid item xs={12}>
 				<Select label={<Trans>เลือกแอคเคาท์ LINE OA</Trans>} value={props.license} onChange={handleOAACCChange}>
-					{OAAcc && OAAcc.map((item, ini) => {
-						return (
-							<MenuItem key={item.botId} value={ini}>{item.name}</MenuItem>
-						)
-					})}
+					{OAAcc &&
+						OAAcc.map((item, ini) => {
+							return (
+								<MenuItem key={item.botId} value={ini}>
+									{item.name}
+								</MenuItem>
+							);
+						})}
 				</Select>
 			</Grid>
 			{/* <Grid item xs={12}>
@@ -178,5 +174,5 @@ export default function License(props) {
 
 License.defaultProps = {
 	license: '',
-	onChange: function (license) { },
+	onChange: function (license) {},
 };

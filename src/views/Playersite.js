@@ -366,7 +366,8 @@ export default function Playersite(props) {
 								<Grid item xs={12}>
 									<Typography variant="body1">
 										<Trans>
-										นอกจากโปรแกรมเล่นแล้ว Lotto Live ยังมีหน้า Landing Page ที่สมบูรณ์ ซึ่งคุณสามารถใช้เพื่อนำเสนอการถ่ายทอดสดของคุณได้สตรีมได้ง่ายและรวดเร็ว
+											นอกจากโปรแกรมเล่นแล้ว Lotto Live ยังมีหน้า Landing Page ที่สมบูรณ์
+											ซึ่งคุณสามารถใช้เพื่อนำเสนอการถ่ายทอดสดของคุณได้สตรีมได้ง่ายและรวดเร็ว
 										</Trans>
 									</Typography>
 								</Grid>
@@ -474,9 +475,7 @@ export default function Playersite(props) {
 										})}
 									</Select>
 									<Typography variant="caption">
-										<Trans>
-											เทมเพลตที่จะใช้สำหรับเว็บไซต์ ปุ่มลบจะลบการเลือกออกจากระบบ
-										</Trans>
+										<Trans>เทมเพลตที่จะใช้สำหรับเว็บไซต์ ปุ่มลบจะลบการเลือกออกจากระบบ</Trans>
 									</Typography>
 								</Grid>
 								<Grid item xs={12} md={3}>

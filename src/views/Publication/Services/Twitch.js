@@ -145,4 +145,4 @@ Service.defaultProps = {
 	onChange: function (output, settings) {},
 };
 
-export { id, name, version, stream_key_link, description, image_copyright,  category, requires, ServiceIcon as icon, Service as component };
+export { id, name, version, stream_key_link, description, image_copyright, category, requires, ServiceIcon as icon, Service as component };
