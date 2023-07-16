@@ -19,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
 
 function init(settings) {
 	const initSettings = {
-		name: 'Lotto Livestream',
-		description: 'Live from Lotto Powered UP',
+		name: 'เว็บหวย นาคราช',
+		description: 'ทายผลหวยออนไลน์ เว็บหวยครบวงจร สมัครง่ายสะดวก เล่นได้ทุกที่ทุกเวลา',
 		author: {},
 		...settings,
 	};
