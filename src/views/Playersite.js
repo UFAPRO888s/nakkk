@@ -343,7 +343,7 @@ export default function Playersite(props) {
 	return (
 		<React.Fragment>
 			<Paper xs={12} md={10}>
-				<PaperHeader title={<Trans>EDIT: Publication Website</Trans>} onAbort={handleAbort} onHelp={handleHelp} />
+				<PaperHeader title={<Trans>EDIT: หน้าแลนดิ้ง</Trans>} onAbort={handleAbort} onHelp={handleHelp} />
 				<Grid container spacing={2}>
 					<TabsVerticalGrid>
 						<Tabs orientation="vertical" variant="scrollable" value={$tab} onChange={handleChangeTab} className="tabs">
@@ -366,8 +366,7 @@ export default function Playersite(props) {
 								<Grid item xs={12}>
 									<Typography variant="body1">
 										<Trans>
-											In addition to the player, the Restreamer offers a complete landingpage, which you can use to present your live
-											stream easily and quickly.
+										นอกจากโปรแกรมเล่นแล้ว Lotto Live ยังมีหน้า Landing Page ที่สมบูรณ์ ซึ่งคุณสามารถใช้เพื่อนำเสนอการถ่ายทอดสดของคุณได้สตรีมได้ง่ายและรวดเร็ว
 										</Trans>
 									</Typography>
 								</Grid>
@@ -476,7 +475,7 @@ export default function Playersite(props) {
 									</Select>
 									<Typography variant="caption">
 										<Trans>
-											Template to be used for creating the publication website. The delete button removes the selection from the system.
+											เทมเพลตที่จะใช้สำหรับเว็บไซต์ ปุ่มลบจะลบการเลือกออกจากระบบ
 										</Trans>
 									</Typography>
 								</Grid>
@@ -507,7 +506,7 @@ export default function Playersite(props) {
 										onChange={handleChange('templatename')}
 									/>
 									<Typography variant="caption">
-										<Trans>Name for the template. If the name already exists, it will be overwritten.</Trans>
+										<Trans>ชื่อสำหรับเทมเพลต หากมีชื่ออยู่แล้ว ชื่อนั้นจะถูกเขียนทับ</Trans>
 									</Typography>
 								</Grid>
 								<Grid item xs={12} md={3}>
@@ -527,7 +526,7 @@ export default function Playersite(props) {
 								</Grid>
 								<Grid item xs={12}>
 									<Typography variant="body1">
-										<Trans>Adjust publication site colors and background as you like.</Trans>
+										<Trans>ปรับสีเว็บไซต์พื้นหลังตามที่คุณต้องการ</Trans>
 									</Typography>
 								</Grid>
 								<Grid item xs={12}>
@@ -700,12 +699,12 @@ export default function Playersite(props) {
 							<Grid container spacing={2}>
 								<Grid item xs={12}>
 									<Typography variant="h2">
-										<Trans>Custom code injection</Trans>
+										<Trans>เพิ่มโค้ดแบบกำหนดเอง</Trans>
 									</Typography>
 								</Grid>
 								<Grid item xs={12}>
 									<Typography variant="body1">
-										<Trans>Add external widgets and styles to the publication site. You can find some examples on the help page.</Trans>
+										<Trans>เพิ่มวิดเจ็ตและสไตล์ภายนอกลงในไซต์สิ่งพิมพ์ คุณสามารถดูตัวอย่างได้ในหน้าความช่วยเหลือ</Trans>
 									</Typography>
 								</Grid>
 								<Grid item xs={12}>
@@ -745,7 +744,7 @@ export default function Playersite(props) {
 										onChange={handleChange('inject2')}
 									/>
 									<Typography variant="caption">
-										<Trans>Expands the area above the channel list (live chat).</Trans>
+										<Trans>ขยายพื้นที่เหนือรายการช่อง (แชทสด)</Trans>
 									</Typography>
 								</Grid>
 								<Grid item xs={12}>
@@ -765,7 +764,7 @@ export default function Playersite(props) {
 										onChange={handleChange('inject3')}
 									/>
 									<Typography variant="caption">
-										<Trans>Expands the area under the channel description (comment boxes).</Trans>
+										<Trans>ขยายพื้นที่ใต้คำอธิบายช่อง (กล่องความคิดเห็น)</Trans>
 									</Typography>
 								</Grid>
 								<Grid item xs={12}>

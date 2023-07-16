@@ -370,7 +370,7 @@ export default function Header(props) {
 					<Stack direction="row" alignItems="center" spacing={0} className="headerLeft">
 						{/* <Logo className="fabIcon" /> */}
 						<Typography className="headerTitle" style={{ fontSize: '20px', fontWeight: '700' }}>
-							LOTTO LIVE
+							HUAYNAKARAJ LIVE
 						</Typography>
 					</Stack>
 					<Stack className="headerRight" direction="row" alignItems="center" spacing={0}>

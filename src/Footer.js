@@ -336,11 +336,7 @@ function Resources(props) {
 							/>
 						)}
 					</ListItem>
-					{/* <ListItem divider>
-						<Button variant="service" color="primary" fullWidth size="large" component="a" href="https://service.datarhei.com" target="blank">
-							<Trans>More details</Trans>
-						</Button>
-					</ListItem> */}
+					
 				</List>
 			</Popover>
 		</Stack>
