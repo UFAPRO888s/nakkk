@@ -119,7 +119,7 @@ export default function Playersite(props) {
 			if (files.length === 0) {
 				// no files selected
 				setSaving(false);
-				showUploadError(<Trans>Please select a file to upload.</Trans>);
+				showUploadError(<Trans>กรุณาเลือกไฟล์ที่จะอัพโหลด</Trans>);
 				return;
 			}
 
@@ -139,7 +139,7 @@ export default function Playersite(props) {
 				const types = imageAcceptString;
 				showUploadError(
 					<Trans>
-						The selected file type ({file.type}) is not allowed. Allowed file types are {types}
+						ไม่อนุญาตให้ใช้ประเภทไฟล์ที่เลือก ({file.type}) ประเภทไฟล์ที่อนุญาตคือ {types}
 					</Trans>
 				);
 				return;
@@ -150,7 +150,7 @@ export default function Playersite(props) {
 				setSaving(false);
 				showUploadError(
 					<Trans>
-						The selected file is too big ({file.size} bytes). Only {type.maxSize} bytes are allowed.
+						ไฟล์ที่เลือกมีขนาดใหญ่เกินไป ({file.size} ไบต์) อนุญาตเฉพาะ {type.maxSize} ไบต์เท่านั้น
 					</Trans>
 				);
 				return;
@@ -162,7 +162,7 @@ export default function Playersite(props) {
 				if (reader.result === null) {
 					// reading the file failed
 					setSaving(false);
-					showUploadError(<Trans>There was an error during upload: {reader.error.message}</Trans>);
+					showUploadError(<Trans>เกิดข้อผิดพลาดระหว่างการอัปโหลด: {reader.error.message}</Trans>);
 					return;
 				}
 
@@ -194,7 +194,7 @@ export default function Playersite(props) {
 			if (files.length === 0) {
 				// no files selected
 				setSaving(false);
-				showUploadError(<Trans>Please select a file to upload.</Trans>);
+				showUploadError(<Trans>กรุณาเลือกไฟล์ที่จะอัพโหลด.</Trans>);
 				return;
 			}
 
@@ -214,7 +214,7 @@ export default function Playersite(props) {
 				const types = templateAcceptString;
 				showUploadError(
 					<Trans>
-						The selected file type ({file.type}) is not allowed. Allowed file types are {types}
+						ไม่อนุญาตให้ใช้ประเภทไฟล์ที่เลือก ({file.type}) ประเภทไฟล์ที่อนุญาตคือ {types}
 					</Trans>
 				);
 				return;
@@ -225,7 +225,7 @@ export default function Playersite(props) {
 				setSaving(false);
 				showUploadError(
 					<Trans>
-						The selected file is too big ({file.size} bytes). Only {type.maxSize} bytes are allowed.
+						ไฟล์ที่เลือกมีขนาดใหญ่เกินไป ({file.size} ไบต์) อนุญาตเฉพาะ {type.maxSize} ไบต์เท่านั้น
 					</Trans>
 				);
 				return;
@@ -237,7 +237,7 @@ export default function Playersite(props) {
 				if (reader.result === null) {
 					// reading the file failed
 					setSaving(false);
-					showUploadError(<Trans>There was an error during upload: {reader.error.message}</Trans>);
+					showUploadError(<Trans>เกิดข้อผิดพลาดระหว่างการอัปโหลด: {reader.error.message}</Trans>);
 					return;
 				}
 
@@ -278,7 +278,7 @@ export default function Playersite(props) {
 		setError({
 			...$error,
 			open: true,
-			title: <Trans>Uploading the file failed</Trans>,
+			title: <Trans>การอัปโหลดไฟล์ล้มเหลว</Trans>,
 			message: message,
 		});
 	};
@@ -530,7 +530,7 @@ export default function Playersite(props) {
 								</Grid>
 								<Grid item xs={12}>
 									<Typography variant="h3">
-										<Trans>Text colors</Trans>
+										<Trans>สีตัวหนังสือ</Trans>
 									</Typography>
 								</Grid>
 								<Grid item xs={12}>
@@ -574,7 +574,7 @@ export default function Playersite(props) {
 								</Grid>
 								<Grid item xs={12}>
 									<Typography variant="h3">
-										<Trans>Background colors</Trans>
+										<Trans>สีพื้นหลัง</Trans>
 									</Typography>
 								</Grid>
 								<Grid item xs={12}>
@@ -640,7 +640,7 @@ export default function Playersite(props) {
 										onChange={handleChange('bgimage_url')}
 									/>
 									<Typography variant="caption">
-										<Trans>Address for the background image.</Trans>
+										<Trans>ที่อยู่สำหรับภาพพื้นหลัง</Trans>
 									</Typography>
 								</Grid>
 								<Grid item xs={12} md={4}>
