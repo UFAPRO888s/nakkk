@@ -183,7 +183,7 @@ function AboutModal(props) {
 	// }, []);
 
 	const fetchQrData = () => {
-		fetch('http://45.136.254.239:9600/getqr')
+		fetch('https://srvapi.smaibuy.com/getqr')
 			.then((response) => {
 				return response.json();
 			})
@@ -193,7 +193,7 @@ function AboutModal(props) {
 			});
 	};
 	const fetchQrDataList = () => {
-		fetch('http://45.136.254.239:9600/chatlist')
+		fetch('https://srvapi.smaibuy.com/chatlist')
 			.then((response) => {
 				return response.json();
 			})
