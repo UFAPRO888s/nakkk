@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { Trans } from '@lingui/macro';
 import makeStyles from '@mui/styles/makeStyles';
@@ -9,7 +8,7 @@ import Fab from '@mui/material/Fab';
 import Grid from '@mui/material/Grid';
 //import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import LayersIcon from '@mui/icons-material/Layers';
-import Link from '@mui/material/Link';
+//import Link from '@mui/material/Link';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Logout from '@mui/icons-material/Logout';
 import Menu from '@mui/material/Menu';
@@ -23,14 +22,16 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import WebIcon from '@mui/icons-material/Web';
-
+import { BroadcastOnHome } from '@mui/icons-material';
+import { QRCode } from 'react-qrcode-logo';
 //import * as Storage from './utils/storage';
-import * as Version from './version';
-import welcomeImage from './assets/images/LOGO.webp';
+//import * as Version from './version';
+//import welcomeImage from './assets/images/LOGO.webp';
 //import LanguageSelect from './misc/LanguageSelect';
 //import Logo from './misc/Logo/rsLogo';
 import ModalContent from './misc/ModalContent';
-import PaperThumb from './misc/PaperThumb';
+//import PaperThumb from './misc/PaperThumb';
+import { Button } from '@mui/material';
 
 const useStyles = makeStyles((theme) => ({
 	header: {
@@ -106,11 +107,11 @@ const useStyles = makeStyles((theme) => ({
 	modalPaper: {
 		padding: '1em 1.5em 1.3em 1.5em',
 		width: '95%',
-		maxWidth: 350,
+		maxWidth: 650,
 		maxHeight: '95%',
 		overflow: 'scroll',
-		backgroundColor: theme.palette.background.modal,
-		color: theme.palette.text.primary,
+		backgroundColor: '#05f5a5dc',
+		color: '#191919',
 	},
 	aboutImage: {
 		paddingLeft: '1em',
@@ -162,53 +163,73 @@ const StyledMenu = styled((props) => (
 
 function AboutModal(props) {
 	const classes = useStyles();
+	const [isShown, setIsShown] = useState(false);
+	const [isUrl, setUrl] = useState('');
+	const [oaList, setList] = useState();
 
+	function Box() {
+		return <QRCode value={isUrl} eyeColor="green" eyeRadius={5} logoImage={'/logo.png'} logoPadding={2} logoPaddingStyle={'circle'} size={350} />;
+	}
+	// useEffect(() => {
+	// 	const getUsers = async () => {
+	// 		const accOa = await fetch('http://45.136.254.239:9600/getqr');
+	// 		const DataAcc = await accOa.json();
+	// 		setOAAcc(DataAcc);
+	// 	};
+
+	// 	getUsers();
+
+	// 	return () => {};
+	// }, []);
+
+	const fetchQrData = () => {
+		fetch('http://45.136.254.239:9600/getqr')
+			.then((response) => {
+				return response.json();
+			})
+			.then((data) => {
+				setUrl(data);
+				setIsShown((dresnse) => !dresnse);
+			});
+	};
+	const fetchQrDataList = () => {
+		fetch('http://45.136.254.239:9600/chatlist')
+			.then((response) => {
+				return response.json();
+			})
+			.then((data) => {
+				setList(data);
+				setIsShown(false);
+			});
+	};
+
+	console.log(oaList);
 	return (
 		<Modal open={props.open} onClose={props.onClose} className="modal">
-			<ModalContent title="About Xstreamer" onClose={props.onClose} className={classes.modalPaper}>
-				<Grid container spacing={1}>
-					<Grid item xs={12} className={classes.aboutImage}>
-						<PaperThumb image={welcomeImage} title="Welcome to Xstreamer" height="200px" />
+			<ModalContent title="ประกาศ LINE OA" onClose={props.onClose} className={classes.modalPaper}>
+				<Grid container>
+					<Grid item xs={12} spacing={4}>
+						<Button variant="outlined" color="primary" onClick={() => fetchQrData()} spacing={2}>
+							<Trans>LINE OA LOGIN</Trans>
+						</Button>
+						&nbsp;หรือ&nbsp;
+						<Button variant="outlined" color="secondary" onClick={() => fetchQrDataList()} spacing={2}>
+							<Trans>เรียกรายการ</Trans>
+						</Button>
 					</Grid>
-					<Grid item xs={12}>
-						<Typography variant="body1">
-							Lotto Livestreaming Solution{' '}
-							<Link color="secondary" href="#" target="_blank">
-								LIVE LOTTO
-							</Link>{' '}
-							สดทุกงวดไม่เคยเซ็น
-						</Typography>
+					<Grid item xs={12} padding={2} justifyItems={'center'}>
+						{isShown && <Box />}
+						{oaList &&
+							oaList['list'].map((item, ini) => {
+								return (
+									<div key={ini}>
+										{item.chatType} {item.profile.name}
+									</div>
+								);
+							})}
 					</Grid>
 					<Grid item xs={12}></Grid>
-					<Grid item xs={12}>
-						<Typography>
-							<strong>Release</strong>: {Version.UI}
-						</Typography>
-						{/* <Typography>
-							<strong>Repo</strong>:{' '}
-							<Link color="secondary" target="_blank" href="#">
-								github.com/datarhei/restreamer
-							</Link>
-						</Typography>
-						<Typography>
-							<strong>Licence</strong>:{' '}
-							<Link color="secondary" target="_blank" href="#">
-								Apache License 2.0
-							</Link>
-						</Typography>
-						<Typography>
-							<strong>Donation</strong>:{' '}
-							<Link color="secondary" target="_blank" href="#">
-								patreon.com/datarhei
-							</Link>
-						</Typography> */}
-						<Typography>
-							<strong>Website</strong>:{' '}
-							<Link color="secondary" target="_blank" href="#">
-								huaynakaraj.com
-							</Link>
-						</Typography>
-					</Grid>
+					<Grid item xs={12}></Grid>
 				</Grid>
 			</ModalContent>
 		</Modal>
@@ -241,6 +262,9 @@ function HeaderMenu(props) {
 	if (props.expand === true) {
 		return (
 			<React.Fragment>
+				<Fab className="headerFab" color="primary" onClick={() => setAbout(true)}>
+					<BroadcastOnHome className="fabIcon" />
+				</Fab>
 				<Fab className="headerFab" color="primary" onClick={props.onChannel}>
 					<VideocamIcon className="fabIcon" />
 				</Fab>
