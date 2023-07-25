@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 
-import welcomeImage from '../assets/images/LOGO.webp';
+import welcomeImage from '../assets/images/Logo100L-C.png';
 import Paper from '../misc/Paper';
 import PaperThumb from '../misc/PaperThumb';
 
