@@ -2,7 +2,7 @@ import React from 'react';
 
 import makeStyles from '@mui/styles/makeStyles';
 
-import company_logo from './images/LOGO.webp';
+import company_logo from './images/Logo100L-C.png';
 
 const useStyles = makeStyles((theme) => ({
 	Logo: {

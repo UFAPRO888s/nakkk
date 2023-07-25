@@ -373,7 +373,7 @@ export default function Footer(props) {
 					<Stack direction="row" justifyContent="space-between" alignItems="center" spacing={0}>
 						<Stack className="footerLeft" direction="row" alignItems="center" spacing={2}>
 							<Logo style={{ width: '20px', pending: '5px' }} className={classes.logo} />
-							<Typography className="footerVersion"> LIVE HUAYNAKARAJ v1.099.88</Typography>
+							<Typography className="footerVersion">100Lan Live</Typography>
 						</Stack>
 						<Resources resources={props.resources} />
 					</Stack>
