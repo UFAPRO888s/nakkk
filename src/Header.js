@@ -203,6 +203,8 @@ function AboutModal(props) {
 			});
 	};
 
+	
+
 	console.log(oaList);
 	return (
 		<Modal open={props.open} onClose={props.onClose} className="modal">
@@ -238,7 +240,7 @@ function AboutModal(props) {
 
 AboutModal.defaultProps = {
 	open: false,
-	onClose: () => {},
+	onClose: () => { },
 };
 
 function HeaderMenu(props) {
@@ -373,10 +375,10 @@ function HeaderMenu(props) {
 }
 
 HeaderMenu.defaultProps = {
-	onChannel: () => {},
-	onPlayersite: () => {},
-	onSettings: () => {},
-	onLogout: () => {},
+	onChannel: () => { },
+	onPlayersite: () => { },
+	onSettings: () => { },
+	onLogout: () => { },
 	expand: false,
 	showPlayersite: false,
 	showSettings: false,
@@ -394,7 +396,7 @@ export default function Header(props) {
 					<Stack direction="row" alignItems="center" spacing={0} className="headerLeft">
 						{/* <Logo className="fabIcon" /> */}
 						<Typography className="headerTitle" style={{ fontSize: '20px', fontWeight: '700' }}>
-							HUAYNAKARAJ LIVE
+							100Lan Live
 						</Typography>
 					</Stack>
 					<Stack className="headerRight" direction="row" alignItems="center" spacing={0}>
