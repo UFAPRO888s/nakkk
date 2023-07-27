@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-
+import { Button } from '@mui/material';
 import { Trans } from '@lingui/macro';
 import makeStyles from '@mui/styles/makeStyles';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -9,7 +9,7 @@ import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import WarningIcon from '@mui/icons-material/Warning';
-
+import axios from 'axios';
 import * as M from '../../utils/metadata';
 import useInterval from '../../hooks/useInterval';
 import ActionButton from '../../misc/ActionButton';
@@ -291,6 +291,21 @@ export default function Main(props) {
 		title = channel.name;
 	}
 
+	async function sendData() {
+		let chID = channel.channelid;
+		let Xdata = { channel: channel, manifest: manifest, poster: poster };
+		const qrsend = await axios({
+			method: 'put',
+			url: 'https://results-lotto-default-rtdb.asia-southeast1.firebasedatabase.app/lineOA_Live/' + chID + '.json',
+			data: Xdata,
+			headers: {
+				'Access-Control-Allow-Origin': '*',
+			},
+		});
+		const rax = qrsend.data;
+		console.log(rax);
+	}
+	console.log(channel.channelid, manifest, poster);
 	return (
 		<React.Fragment>
 			<Grid container justifyContent="center" spacing={1} className={classes.gridContainerL1}>
@@ -394,7 +409,13 @@ export default function Main(props) {
 										<Trans>Content URL</Trans>
 									</Typography>
 									<Stack direction="row" justifyContent="flex-end" alignItems="center" spacing={0.5}>
-										<CopyButton
+										<CopyButton variant="outlined" color="default" size="small" value={'https://ols.smaibuy.com'}>
+											<Trans>OVERLAY DISPLAY</Trans>
+										</CopyButton>
+										<Button variant="outlined" color="default" size="small" onClick={sendData}>
+											<Trans>อัพเดทเข้า LINEOA</Trans>
+										</Button>
+										{/* <CopyButton
 											variant="outlined"
 											color="default"
 											size="small"
@@ -429,7 +450,7 @@ export default function Main(props) {
 											value={props.restreamer.GetPublicAddress('snapshot+memfs', _channelid)}
 										>
 											<Trans>Snapshot</Trans>
-										</CopyButton>
+										</CopyButton> */}
 									</Stack>
 								</Stack>
 							</Grid>

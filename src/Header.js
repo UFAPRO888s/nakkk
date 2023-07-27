@@ -22,7 +22,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import WebIcon from '@mui/icons-material/Web';
-import { BroadcastOnHome } from '@mui/icons-material';
+// import { BroadcastOnHome } from '@mui/icons-material';
 import { QRCode } from 'react-qrcode-logo';
 //import * as Storage from './utils/storage';
 //import * as Version from './version';
@@ -203,8 +203,6 @@ function AboutModal(props) {
 			});
 	};
 
-	
-
 	console.log(oaList);
 	return (
 		<Modal open={props.open} onClose={props.onClose} className="modal">
@@ -240,7 +238,7 @@ function AboutModal(props) {
 
 AboutModal.defaultProps = {
 	open: false,
-	onClose: () => { },
+	onClose: () => {},
 };
 
 function HeaderMenu(props) {
@@ -264,9 +262,9 @@ function HeaderMenu(props) {
 	if (props.expand === true) {
 		return (
 			<React.Fragment>
-				<Fab className="headerFab" color="primary" onClick={() => setAbout(true)}>
+				{/* <Fab className="headerFab" color="primary" onClick={() => setAbout(true)}>
 					<BroadcastOnHome className="fabIcon" />
-				</Fab>
+				</Fab> */}
 				<Fab className="headerFab" color="primary" onClick={props.onChannel}>
 					<VideocamIcon className="fabIcon" />
 				</Fab>
@@ -375,10 +373,10 @@ function HeaderMenu(props) {
 }
 
 HeaderMenu.defaultProps = {
-	onChannel: () => { },
-	onPlayersite: () => { },
-	onSettings: () => { },
-	onLogout: () => { },
+	onChannel: () => {},
+	onPlayersite: () => {},
+	onSettings: () => {},
+	onLogout: () => {},
 	expand: false,
 	showPlayersite: false,
 	showSettings: false,
